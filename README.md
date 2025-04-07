@@ -1,1 +1,1 @@
-# LINUX-OS-NOTES
+# OS-NOTES
