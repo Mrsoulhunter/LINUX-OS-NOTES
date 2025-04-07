@@ -1,0 +1,38 @@
+LINUX OS Basics:
+Linux File System Structure : 
+├── bin        -> essential binaries like ls, cp
+├── boot       -> bootloader files
+├── dev        -> device files
+├── etc        -> config files
+├── home       -> user home directories
+├── lib        -> essential shared libraries
+├── media      -> mounted devices like USB
+├── opt        -> optional software
+├── proc       -> process info (virtual filesystem)
+├── root       -> root user’s home
+├── sbin       -> system binaries (for root)
+├── tmp        -> temporary files
+├── usr        -> user apps and files
+├── var        -> variable data (logs, mail)
+
+/ – Root Directory
+Master folder. Everything in Linux starts here.
+Think of it like C:\ in Windows, but way more organized.
+/bin – Essential User Binaries
+🛠️ Contains basic user commands needed for the system to run even in emergency mode.
+Examples:
+•	ls, cp, mv, rm, cat, bash
+Use Case:
+•	When system is in rescue/recovery mode, these commands still work.
+•	As a red teamer or forensic guy, if /usr gets corrupted, you still have basic tools in /bin to investigate or fix the system.
+/boot – Boot Loader Files
+🧬 Contains files needed to boot the system, like the Linux kernel, grub, initrd.
+Examples:
+•	vmlinuz – the actual kernel file
+•	initrd.img – temporary filesystem loaded into RAM
+•	grub.cfg – bootloader config
+Use Case:
+•	If you're analyzing a system that won’t boot, you'd check /boot for corruption.
+•	Red teamers sometimes modify GRUB to maintain persistence 👀
+
+
